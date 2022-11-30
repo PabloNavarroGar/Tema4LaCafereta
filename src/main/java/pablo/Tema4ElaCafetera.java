@@ -30,14 +30,43 @@ public class Tema4ElaCafetera {
         c2.servirTaza(1000);
 
         System.out.println(c2);
-
+        System.out.println("-----------------------------");
         //Ajuste Cafetera 
         Cafetera c3 = new Cafetera(750, 900);
 
         System.out.println(c3);
-        
+
         c3.vaciarCafetera();
         System.out.println("--------Vaciando cafereta------------");
         System.out.println(c3);
+
+        //Agregar cantidad de cafe a la cafetera
+        Cafetera c4 = new Cafetera(1000, 600);
+        System.out.println("---------Estado Cafetera 4-----------");
+        System.out.println(c4);
+
+        c4.agregarCafe(600);
+
+        System.out.println("-------Estado despues de echarle cafe-------------");
+        System.out.println(c4);
+        
+        
+        //Creacion de Persona y cafetera para la parte final
+        Persona p1 = new Persona("Pablo", 25);
+        Cafetera c5 = new Cafetera();
+        System.out.println(p1);
+        System.out.println("La cafetera que se usara tiene "+c5);
+        
+        p1.hacerCafe(c5);
+        
+        System.out.println("Se ha hecho cafe la cafetera pasa a tener "+c5);
+        
+        p1.beberCafe(c5);
+        
+        System.out.println("La p1 se a tomado un cafe le, la cafetera tiene ahora mismo"+c5);
+        
+        p1.beberCafe(c5);
+        
+        System.out.println("La p1 se a tomado un cafe le, la cafetera tiene ahora mismo"+c5);
     }
 }

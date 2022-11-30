@@ -33,9 +33,11 @@ public class Cafetera {
     cafetera, se ajustará la cantidad actual a la capacidad máxima.*/
     public Cafetera(int cantidadMaxima, int cantidadActual) {
         this.cantidadMaxima = cantidadMaxima;
-        
+
         if (cantidadActual > cantidadMaxima) {
             this.cantidadActual = cantidadMaxima;
+        } else {
+            this.cantidadActual = cantidadActual;
         }
 
     }
@@ -61,37 +63,47 @@ public class Cafetera {
         this.cantidadActual = cantidadActual;
     }
 
-    
     //Metodos
-    
-    public void llenar(){
-        
+    public void llenar() {
+
         this.cantidadActual = cantidadMaxima;
     }
+
     /*Si la cantidad actual de café “no alcanza” para llenar la taza, se sirve lo que quede.*/
-    
-    public void servirTaza(double cantidadAservir){
+
+    public void servirTaza(double cantidadAservir) {
         //Si la cantidad en menor que a servir
-        if(this.cantidadActual < cantidadAservir){
+        if (this.cantidadActual < cantidadAservir) {
             //se pone a 0
-           this.cantidadActual = 0;
-        } else{
+            this.cantidadActual = 0;
+        } else {
             //si no da el caso, se resta con la cantidad que hemos puesto
             this.cantidadActual -= cantidadAservir;
         }
-        
+
     }
-    
-    public void vaciarCafetera(){
-        
-        this.cantidadActual=0;
+
+    public void vaciarCafetera() {
+
+        this.cantidadActual = 0;
     }
+
     /*añade a la cafetera la cantidad de café indicada, 
     teniendo en cuenta que la cafetera no puede rebosar.*/
-    public void agregarCafe(double cantidadAgregar){
-        
-        
-        
+    public void agregarCafe(double cantidadAgregar) {
+        //Si la cantidadAgregada en menor o igual a la cantidad actual Y  si la cantidadagreada es  mayor o igual a la cantidadActual
+        if (cantidadAgregar <= this.cantidadActual && cantidadAgregar >= this.cantidadActual) {
+            //Me sumas las cantidades
+            this.cantidadActual += cantidadAgregar;
+            //Si esa suma a dado mas de 1000
+            //dentro del if, si la cantidadActual es mayor a su capacidad, te pones como maximo su capacidad que tiene la cafetera
+            //
+            if (this.cantidadActual > this.cantidadMaxima) {
+                this.cantidadActual = this.cantidadMaxima;
+            }
+
+        }
+
     }
-    
+
 }
