@@ -46,8 +46,8 @@ public class Persona {
         //se usa el metodo de llenar
     }
     
-    public void beberCafe(Cafetera c){
-        c.servirTaza(240);
+    public void beberCafe(Cafetera c,int cantidad){
+        c.setCantidadActual(c.getCantidadActual()-cantidad);
         //Se usa el metodo de servir taza
     }
     

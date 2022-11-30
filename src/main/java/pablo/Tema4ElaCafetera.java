@@ -61,12 +61,12 @@ public class Tema4ElaCafetera {
         
         System.out.println("Se ha hecho cafe la cafetera pasa a tener "+c5);
         
-        p1.beberCafe(c5);
+        p1.beberCafe(c5,100);
         
-        System.out.println("La p1 se a tomado un cafe le, la cafetera tiene ahora mismo"+c5);
+        System.out.println("La p1 se a tomado un cafe de la cafetera tiene ahora mismo "+c5);
         
-        p1.beberCafe(c5);
+        p1.beberCafe(c5,100);
         
-        System.out.println("La p1 se a tomado un cafe le, la cafetera tiene ahora mismo"+c5);
+        System.out.println("La p1 se a tomado un cafe de la cafetera tiene ahora mismo "+c5);
     }
 }
